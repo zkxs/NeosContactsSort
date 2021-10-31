@@ -2,6 +2,8 @@
 
 A [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos VR](https://neos.com/) that sorts contacts Better™.
 
+Relevant Neos issue: [#2596](https://github.com/Neos-Metaverse/NeosPublic/issues/2596).
+
 ## Sorting Order
 1. Friends with unread messages
 2. Ties broken by online status
