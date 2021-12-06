@@ -12,7 +12,7 @@ namespace NeosContactsSort
     {
         public override string Name => "NeosContactsSort";
         public override string Author => "runtime";
-        public override string Version => "1.0.0";
+        public override string Version => "1.1.0";
         public override string Link => "https://github.com/zkxs/NeosContactsSort";
 
 
@@ -74,11 +74,11 @@ namespace NeosContactsSort
                     if (orderNumber1 != orderNumber2)
                         return orderNumber1.CompareTo(orderNumber2);
 
-                    // neos bot comes last
+                    // neos bot comes first
                     if (friend1.FriendUserId == "U-Neos" && friend2.FriendUserId != "U-Neos")
-                        return 1;
-                    if (friend2.FriendUserId == "U-Neos" && friend1.FriendUserId != "U-Neos")
                         return -1;
+                    if (friend2.FriendUserId == "U-Neos" && friend1.FriendUserId != "U-Neos")
+                        return 1;
 
                     // sort by name
                     return string.Compare(friend1.FriendUsername, friend2.FriendUsername, StringComparison.CurrentCultureIgnoreCase);

@@ -5,15 +5,35 @@ A [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos VR](https
 Relevant Neos issue: [#2596](https://github.com/Neos-Metaverse/NeosPublic/issues/2596).
 
 ## Sorting Order
+I've made a few noteworthy changes to the sorting order:
+- No longer sorts by most recent message timestamp
+- Alphabetical ordering now ignores case, fixing issue where "b" would come before "A"
+- Incoming friend requests are now the first category, preceding Online friends
+- Neos Bot is now forced to the top of the Online friends category
+- Sent Requests are separated from Offline friends, and have a yellow background color
+
+### Vanilla Sort
+1. Friends with unread messages
+2. Ties broken by online status
+   1. Online Friends
+   2. Incoming Friend Requests
+   3. Away Friends
+   4. Busy Friends
+   5. Offline Friends and Sent Requests
+3. Further ties broken by most recent message
+4. Even further ties broken by username alphabetical order (case sensitive)
+
+### Modded Sort
 1. Friends with unread messages
 2. Ties broken by online status
    1. Incoming Friend Requests
-   2. Online Friends
-   3. Neos Bot
+   2. Neos Bot
+   3. Online Friends
    4. Away Friends
-   5. Sent Requests (background color changed from gray to yellow!)
-   6. Offline Friends
-3. Further ties broken by username
+   5. Busy Friends
+   6. Sent Requests (background color changed from gray to yellow!)
+   7. Offline Friends
+3. Further ties broken by username alphabetical order (case insensitive)
 
 ## Installation
 1. Install [NeosModLoader](https://github.com/zkxs/NeosModLoader).
