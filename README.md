@@ -7,7 +7,6 @@ Relevant Neos issue: [#2596](https://github.com/Neos-Metaverse/NeosPublic/issues
 ## Sorting Order
 I've made a few noteworthy changes to the sorting order:
 - No longer sorts by most recent message timestamp
-- Alphabetical ordering now ignores case, fixing issue where "b" would come before "A"
 - Incoming friend requests are now the first category, preceding Online friends
 - Neos Bot is now forced to the top of the Online friends category
 - Sent Requests are separated from Offline friends, and have a yellow background color
@@ -21,7 +20,7 @@ I've made a few noteworthy changes to the sorting order:
    4. Busy Friends
    5. Offline Friends and Sent Requests
 3. Further ties broken by most recent message
-4. Even further ties broken by username alphabetical order (case sensitive)
+4. Even further ties broken by username alphabetical order
 
 ### Modded Sort
 1. Friends with unread messages
@@ -33,7 +32,7 @@ I've made a few noteworthy changes to the sorting order:
    5. Busy Friends
    6. Sent Requests (background color changed from gray to yellow!)
    7. Offline Friends
-3. Further ties broken by username alphabetical order (case insensitive)
+3. Further ties broken by username alphabetical order
 
 ## Installation
 1. Install [NeosModLoader](https://github.com/zkxs/NeosModLoader).
