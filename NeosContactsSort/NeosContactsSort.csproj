@@ -3,7 +3,7 @@
     <ProjectGuid>{1e94202c-17df-40b2-a757-68f0ef155deb}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>PhysicalProcessorCount</AssemblyName>
+    <AssemblyName>NeosContactsSort</AssemblyName>
     <RootNamespace>NeosContactsSort</RootNamespace>
     <AssemblyTitle>NeosContactsSort</AssemblyTitle>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
