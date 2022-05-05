@@ -50,10 +50,10 @@ namespace NeosContactsSort
                 // we need to sort
                 ____listRoot.Target.SortChildren((slot1, slot2) =>
                 {
-                    FriendItem component1 = slot1.GetComponent<FriendItem>();
-                    FriendItem component2 = slot2.GetComponent<FriendItem>();
-                    Friend friend1 = component1?.Friend;
-                    Friend friend2 = component2?.Friend;
+                    FriendItem? component1 = slot1.GetComponent<FriendItem>();
+                    FriendItem? component2 = slot2.GetComponent<FriendItem>();
+                    Friend? friend1 = component1?.Friend;
+                    Friend? friend2 = component2?.Friend;
 
                     // nulls go last
                     if (friend1 != null && friend2 == null)
@@ -64,24 +64,24 @@ namespace NeosContactsSort
                         return 0;
 
                     // friends with messages come first
-                    int messageComparison = -component1.HasMessages.CompareTo(component2.HasMessages);
+                    int messageComparison = -component1!.HasMessages.CompareTo(component2!.HasMessages);
                     if (messageComparison != 0)
                         return messageComparison;
 
                     // sort by online status
-                    int orderNumber1 = GetOrderNumber(friend1);
-                    int orderNumber2 = GetOrderNumber(friend2);
+                    int orderNumber1 = GetOrderNumber(friend1!);
+                    int orderNumber2 = GetOrderNumber(friend2!);
                     if (orderNumber1 != orderNumber2)
                         return orderNumber1.CompareTo(orderNumber2);
 
                     // neos bot comes first
-                    if (friend1.FriendUserId == "U-Neos" && friend2.FriendUserId != "U-Neos")
+                    if (friend1!.FriendUserId == "U-Neos" && friend2!.FriendUserId != "U-Neos")
                         return -1;
-                    if (friend2.FriendUserId == "U-Neos" && friend1.FriendUserId != "U-Neos")
+                    if (friend2!.FriendUserId == "U-Neos" && friend1!.FriendUserId != "U-Neos")
                         return 1;
 
                     // sort by name
-                    return string.Compare(friend1.FriendUsername, friend2.FriendUsername, StringComparison.CurrentCultureIgnoreCase);
+                    return string.Compare(friend1!.FriendUsername, friend2!.FriendUsername, StringComparison.CurrentCultureIgnoreCase);
                 });
             }
         }
