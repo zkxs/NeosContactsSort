@@ -32,6 +32,7 @@ I've made a few noteworthy changes to the sorting order:
    5. Busy Friends
    6. Sent Requests (background color changed from gray to yellow!)
    7. Offline Friends
+   8. Search results
 3. Further ties broken by username alphabetical order
 
 ## Installation
